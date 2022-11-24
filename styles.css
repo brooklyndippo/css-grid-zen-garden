@@ -1,0 +1,86 @@
+.page-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1rem;
+    grid-template-areas: 
+        "h h h"
+        "m m s"
+        "m m s";
+}
+
+@media only screen and (max-width: 800px) {
+    .page-wrapper {
+        grid-template-areas: 
+            "h h h"
+            "m m m"
+            "s s s";
+    }
+}
+
+.main {
+    grid-area: m;
+    background-color: rgba(255, 0, 0, 0.408);
+}
+
+.intro {
+    grid-area: h;
+    background-color: rgba(255, 255, 0, 0.402); 
+}
+
+.sidebar {
+    grid-area: s;
+    background-color: rgba(0, 255, 0, 0.514);
+}
+
+.preamble {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1rem;
+    grid-template-areas:
+        "t t t"
+        "p q r"
+}
+
+.preamble h3 {
+    grid-area: t;
+    background-color: yellow;
+}
+
+.preamble p {
+    grid-area: p;
+    background-color: rgba(253, 38, 38, 0.514);
+}
+
+.preamble p:nth-child(2) {
+    grid-area: q;
+    background-color: rgba(0, 255, 0, 0.514);
+}
+
+.preamble p:nth-child(3) {
+    grid-area: r;
+    background-color: rgba(0, 140, 255, 0.514);
+}
+
+.explanation {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+    grid-template-areas: 
+        "a a"
+        "b c";
+}
+
+.explanation h3 {
+    grid-area: a;
+    background-color: rgba(255, 0, 0, 0.413);
+}
+
+.explanation p:first-of-type {
+    grid-area: b;
+    background-color: rgba(255, 255, 0, 0.464);
+}
+
+.explanation p:last-child {
+    grid-area: c;
+    background-color: rgba(0, 221, 255, 0.438);
+}
